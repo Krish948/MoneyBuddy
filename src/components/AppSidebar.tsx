@@ -41,11 +41,11 @@ export const AppSidebar = () => {
       <SidebarHeader className="border-b px-4 py-4">
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-display font-bold">
-            L
+            M
           </div>
           {!collapsed && (
             <div className="flex flex-col leading-tight">
-              <span className="font-display text-sm font-semibold">Ledgr</span>
+              <span className="font-display text-sm font-semibold">MoneyBuddy</span>
               <span className="text-xs text-muted-foreground">Personal finance</span>
             </div>
           )}

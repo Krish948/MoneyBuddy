@@ -162,7 +162,7 @@ The function:
 ## Notes
 
 - The browser metadata/title uses the MoneyBuddy brand.
-- Some UI labels currently still reference Ledgr in components/pages and can be renamed for full branding consistency.
+- UI branding has been standardized to MoneyBuddy across the app.
 
 ## Testing
 

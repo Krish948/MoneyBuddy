@@ -26,7 +26,7 @@ const Auth = () => {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    document.title = "Sign in — Ledgr";
+    document.title = "Sign in — MoneyBuddy";
   }, []);
 
   if (!loading && user) return <Navigate to="/" replace />;
@@ -74,7 +74,7 @@ const Auth = () => {
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
             <Wallet className="h-6 w-6" />
           </div>
-          <h1 className="font-display text-2xl font-semibold tracking-tight">Welcome to Ledgr</h1>
+          <h1 className="font-display text-2xl font-semibold tracking-tight">Welcome to MoneyBuddy</h1>
           <p className="mt-1 text-sm text-muted-foreground">
             Track expenses, set budgets, get AI insights.
           </p>
