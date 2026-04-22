@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Linear/Stripe-inspired light minimal design system. All colors HSL. */
+
+@layer base {
+  :root {
+    --background: 240 20% 99%;
+    --foreground: 240 10% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
+
+    /* Indigo/violet primary, restrained */
+    --primary: 244 65% 56%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 244 100% 97%;
+
+    --secondary: 240 8% 96%;
+    --secondary-foreground: 240 10% 12%;
+
+    --muted: 240 10% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 240 10% 96%;
+    --accent-foreground: 240 10% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Finance signal colors */
+    --success: 152 60% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-soft: 152 60% 95%;
+
+    --warning: 35 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-soft: 35 100% 95%;
+
+    --danger: 0 72% 51%;
+    --danger-soft: 0 90% 96%;
+
+    --border: 240 10% 92%;
+    --input: 240 10% 92%;
+    --ring: 244 65% 56%;
+
+    --radius: 0.75rem;
+
+    /* Chart palette — sober, modern */
+    --chart-1: 244 65% 56%;
+    --chart-2: 168 70% 42%;
+    --chart-3: 35 92% 55%;
+    --chart-4: 340 75% 55%;
+    --chart-5: 199 80% 48%;
+    --chart-6: 270 60% 60%;
+    --chart-7: 90 50% 45%;
+
+    /* Sidebar */
+    --sidebar-background: 240 14% 98%;
+    --sidebar-foreground: 240 10% 25%;
+    --sidebar-primary: 244 65% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 94%;
+    --sidebar-accent-foreground: 240 10% 12%;
+    --sidebar-border: 240 10% 92%;
+    --sidebar-ring: 244 65% 56%;
+
+    /* Surface elevation */
+    --shadow-sm: 0 1px 2px 0 hsl(240 10% 8% / 0.04);
+    --shadow-md: 0 4px 12px -2px hsl(240 10% 8% / 0.06), 0 2px 4px -2px hsl(240 10% 8% / 0.04);
+    --shadow-lg: 0 12px 32px -8px hsl(240 10% 8% / 0.10);
+
+    --gradient-subtle: linear-gradient(180deg, hsl(240 20% 99%) 0%, hsl(240 14% 97%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(244 65% 56%), hsl(264 70% 60%));
+  }
+
+  .dark {
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 244 75% 65%;
+    --primary-foreground: 240 10% 6%;
+    --primary-soft: 244 30% 18%;
+    --secondary: 240 8% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 8% 14%;
+    --muted-foreground: 240 5% 60%;
+    --accent: 240 8% 14%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 152 60% 45%;
+    --success-foreground: 0 0% 98%;
+    --success-soft: 152 30% 16%;
+    --warning: 35 92% 55%;
+    --warning-soft: 35 30% 16%;
+    --danger: 0 72% 55%;
+    --danger-soft: 0 30% 16%;
+    --border: 240 8% 16%;
+    --input: 240 8% 16%;
+    --ring: 244 75% 65%;
+    --sidebar-background: 240 10% 7%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 244 75% 65%;
+    --sidebar-primary-foreground: 240 10% 6%;
+    --sidebar-accent: 240 8% 14%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 8% 16%;
+    --sidebar-ring: 244 75% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html, body, #root {
+    @apply h-full;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01", "ss03";
+  }
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .surface-card {
+    @apply rounded-xl border bg-card;
+    box-shadow: var(--shadow-sm);
+  }
+  .stat-label {
+    @apply text-xs font-medium uppercase tracking-wider text-muted-foreground;
+  }
+}
